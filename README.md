@@ -1,68 +1,88 @@
-Project Overview
+# **Library Management System SQL Project by 440DevHub**
+
+## **Project Overview**
 This project is designed to simulate the operations of a library, focusing on managing books, authors, customers, and transactions using SQL. The goal is to demonstrate my ability to create, manipulate, and manage a relational database, along with implementing advanced SQL queries and normalization techniques.
 
-Project Structure
-1. Database Design
-The database consists of several interconnected tables that represent different aspects of the library system. Below are the key tables:
+---
 
-Books: Stores information about books in the library.
+## **Project Structure**
+The project is organized into the following components:
 
-Columns: BookID, Title, Genre, AuthorID, YearPublished
-Authors: Contains information about authors.
+### **1. SQL Scripts**
+- **`sql/create_tables.sql`**: Contains SQL statements to create the database schema, including tables for books, authors, customers, transactions, and genres.
+- **`sql/insert_data.sql`**: Populates the database with sample data for testing purposes.
+- **`sql/queries.sql`**: Includes SQL queries to demonstrate database operations, reports, and advanced functionalities.
 
-Columns: AuthorID, FirstName, LastName, DateOfBirth
-Customers: Contains details about library customers.
+### **2. Documentation**
+- **`README.md`**: Explains the project, how to set it up, and how to use it.
+- **Database Diagram (Optional)**: Visual representation of the database schema.
 
-Columns: CustomerID, FirstName, LastName, Email, Phone
-Transactions: Stores records of issued and returned books.
+### **3. Sample Outputs (Optional)**
+- Text files or screenshots demonstrating the output of some advanced queries.
 
-Columns: TransactionID, BookID, CustomerID, IssueDate, ReturnDate
-Genres: Defines the different genres available in the library.
+---
 
-Columns: GenreID, GenreName
-2. SQL Operations
-The project includes the following SQL operations to demonstrate the full capabilities of the system:
+## **Database Design**
+The system consists of the following tables:
 
-CRUD Operations:
+- **Books**: Stores information about books.
+  - Columns: `BookID`, `Title`, `Genre`, `AuthorID`, `YearPublished`
+- **Authors**: Contains information about authors.
+  - Columns: `AuthorID`, `FirstName`, `LastName`, `DateOfBirth`
+- **Customers**: Contains details about library customers.
+  - Columns: `CustomerID`, `FirstName`, `LastName`, `Email`, `Phone`
+- **Transactions**: Records the issuance and return of books.
+  - Columns: `TransactionID`, `BookID`, `CustomerID`, `IssueDate`, `ReturnDate`
+- **Genres**: Defines the genres available in the library.
+  - Columns: `GenreID`, `GenreName`
 
-Inserting new books, authors, customers, and genres.
-Updating customer information (e.g., email or phone number).
-Deleting old or damaged books.
-Retrieving a list of books by a specific author or genre.
-Advanced Queries:
+---
 
-Retrieve books that are currently issued and have not been returned.
-Calculate the number of books issued by each customer.
-Find the most popular genre based on book issues.
-Get a list of all books with details on available copies.
-3. Normalization
-The database has been normalized to the following normal forms to avoid data redundancy:
+## **Key Features**
 
-1NF (First Normal Form)
-2NF (Second Normal Form)
-3NF (Third Normal Form)
-4. Joins and Complex Queries
-The system utilizes multiple types of joins to combine data from different tables:
+### **CRUD Operations**
+- Add, update, and delete entries in the database for books, authors, and customers.
+- Retrieve specific data, such as books by a particular author or genre.
 
-INNER JOIN: Combining data from Books and Authors to list books and their respective authors.
-LEFT JOIN: Retrieving all books, including those that have not been issued.
-RIGHT JOIN: Finding customers who have not issued any books.
-5. Indexes and Constraints
-To improve query performance and ensure data integrity, the following techniques have been implemented:
+### **Advanced Queries**
+- Retrieve books that are currently issued and have not been returned.
+- Calculate the number of books issued by a customer.
+- Find the most popular genre based on book issues.
+- Update customer details and delete old or damaged books.
 
-Indexes on frequently queried columns such as BookID, CustomerID, and GenreID.
-Foreign key constraints to maintain referential integrity between tables.
-6. Reports
-Several reports have been created to provide useful insights:
+### **Normalization**
+The database is normalized to avoid redundancy:
+- **1NF**: Ensures atomicity of data.
+- **2NF**: Removes partial dependencies.
+- **3NF**: Removes transitive dependencies.
 
-List of books due for return.
-Top authors based on the number of books issued.
-List of top customers based on the number of books issued.
-Technologies Used
-SQL (MySQL, PostgreSQL, SQLite, or SQL Server)
-Tools: [Database Management System of choice]
-How to Use
-Clone the repository.
-Set up the database using the provided schema.
-Use SQL queries to interact with the data, perform CRUD operations, and generate reports.
-Optionally, integrate with a front-end application for visualization.
+### **Joins**
+- Use of **INNER JOIN**, **LEFT JOIN**, and **RIGHT JOIN** to combine data from multiple tables.
+
+---
+
+## **Technologies Used**
+- **SQL**: MySQL, PostgreSQL, or SQLite (any supported DBMS).
+- **Tools**: Visual Studio Code, MySQL Workbench, or other database management tools.
+
+---
+
+## **How to Use**
+1. Clone this repository to your local machine.
+2. Navigate to the `sql/` folder.
+3. Run the scripts in the following order:
+   - `create_tables.sql`: To set up the database schema.
+   - `insert_data.sql`: To populate the database with sample data.
+   - `queries.sql`: To run sample queries and demonstrate functionality.
+
+---
+
+## **Future Improvements**
+- Add more advanced features like book reservations and overdue notifications.
+- Integrate a front-end interface for easier interaction.
+- Expand the database to include staff and library branches.
+
+---
+
+## **License**
+This project is licensed under the MIT License.
