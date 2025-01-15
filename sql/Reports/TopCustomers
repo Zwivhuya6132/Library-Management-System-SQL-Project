@@ -1,0 +1,12 @@
+SELECT 
+    c.FirstName || ' ' || c.LastName AS CustomerName,
+    COUNT(t.TransactionID) AS BooksIssued
+FROM 
+    Customers c
+JOIN 
+    Transactions t ON c.CustomerID = t.CustomerID
+GROUP BY 
+    c.CustomerID, c.FirstName, c.LastName
+ORDER BY 
+    BooksIssued DESC
+LIMIT 10;
