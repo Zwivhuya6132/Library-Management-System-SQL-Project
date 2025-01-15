@@ -62,7 +62,7 @@ The database is normalized to avoid redundancy:
 ---
 
 ## **Technologies Used**
-- **SQL**: MySQL, PostgreSQL, or SQLite (any supported DBMS).
+- **SQL**: MySQL, PostgreSQL, or SQLite.
 - **Tools**: Visual Studio Code, MySQL Workbench, or other database management tools.
 
 ---
@@ -73,7 +73,7 @@ The database is normalized to avoid redundancy:
 3. Run the scripts in the following order:
    - `create_tables.sql`: To set up the database schema.
    - `insert_data.sql`: To populate the database with sample data.
-   - `queries.sql`: To run sample queries and demonstrate functionality.
+   - `Advanced queries.sql`: To run sample queries and demonstrate functionality.
 
 ---
 
@@ -85,4 +85,4 @@ The database is normalized to avoid redundancy:
 ---
 
 ## **License**
-This project is licensed under the MIT License.
+This project is licensed under the 440DevHub.
