@@ -1,7 +1,7 @@
 Project Overview
 This project is designed to simulate the operations of a library, focusing on managing books, authors, customers, and transactions using SQL. The goal is to demonstrate my ability to create, manipulate, and manage a relational database, along with implementing advanced SQL queries and normalization techniques.
 
-<b>>Project Structure</b
+<b>>Project Structure</b>
 1. Database Design
 The database consists of several interconnected tables that represent different aspects of the library system. Below are the key tables:
 
